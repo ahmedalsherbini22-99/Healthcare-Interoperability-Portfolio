@@ -29,6 +29,6 @@ A clinical workstation (Microdicom) attempted to push a CT medical imaging study
 * Successfully restored multi-vendor interoperability, ensuring true Vendor Neutral Archive (VNA) compliance.
 * Minimized clinical downtime by establishing a structured, log-driven troubleshooting framework for rapid packet inspection and configuration governance.
 
-[Insert Screenshot: Orthanc Error Log - The DICOM server accepts no transfer syntax]
-[Insert Screenshot: configuration.json - Corrupted Transfer Syntax String]
-[Insert Screenshot: configuration.json - Corrected Transfer Syntax]
+[Orthanc Error Log - The DICOM server accepts no transfer syntax](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%202:%20C-STORE%20(Image%20Transfer)%20Failure/The%20DICOM%20server%20accepts%20no%20transfer%20syntax.png?raw=true)
+[configuration.json - Corrupted Transfer Syntax String](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%202:%20C-STORE%20(Image%20Transfer)%20Failure/Corrupted%20Transfer%20syntax%20string.png?raw=true)
+[configuration.json - Corrected Transfer Syntax](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%202:%20C-STORE%20(Image%20Transfer)%20Failure/Corrected%20Transfer%20Syntax.png?raw=true)
