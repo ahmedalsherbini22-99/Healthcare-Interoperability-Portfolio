@@ -1,0 +1,37 @@
+### Technical Case Study: C-MOVE Routing & TCP Timeout Resolution
+
+**1. System Environment**
+* Server: Orthanc PACS v1.12.11
+* Client Modality: Microdicom Workstation
+* Core Protocols: DICOM C-FIND (Search), DICOM C-MOVE (Download), DICOM C-STORE (Push)
+
+**2. Executive Summary & Incident Report**
+A clinical user reported that they could successfully query the PACS database to view patient study lists, but attempting to download and view the actual imaging files resulted in an immediate system error.
+
+**3. Root Cause Analysis (RCA)**
+* Phase 1 - The Routing Failure (Blind Server): The C-FIND (search) succeeded because it utilized the pre-existing network connection. However, the C-MOVE (download) protocol requires the central server to act as a client and initiate a new, outbound C-STORE connection back to the workstation. The PACS server's routing table (DicomModalities) was missing the client's Application Entity Title (AET), leaving the server "blind" to the destination.
+* Phase 2 - The TCP Timeout (Listener Unreachable): After updating the routing table with the client's AET, the server successfully attempted the outbound connection but encountered a TCP Timeout. The client workstation's internal DICOM listener (SCP) was either disabled or configured to a different listening port than the one specified in the PACS routing table, preventing the network handshake from completing.
+
+**4. Diagnostic & Troubleshooting Methodology**
+* Protocol Isolation: Confirmed base network connectivity and firewall clearance by successfully executing a C-FIND search query.
+* Live Trace Capture: Executed a live DICOM trace (--trace-dicom) during a download attempt to capture raw network states.
+* Log Parsing (Phase 1): Identified the initial protocol rejection where the server aborted the C-MOVE due to an unknown destination AET.
+* Log Parsing (Phase 2): After configuring the AET, captured the secondary failure log: Error in the network protocol: DicomAssociation - connecting to AET "MICRODICOM": TCP Initialization Error... (Timeout).
+* Client Audit: Investigated the client workstation (Microdicom) settings to audit its active DICOM listener status and designated receiving port.
+
+**5. Remediation & Resolution**
+* Enabled Client Listener: Activated the local DICOM server on the Microdicom workstation so it could actively listen for incoming inbound image pushes.
+* Port Synchronization: Audited the client's listening port (e.g., 11112) and updated the central PACS server's configuration.json file to strictly match: "MICRODICOM" : [ "MICRODICOM", "127.0.0.1", 11112 ]
+* Validation: Restarted the Orthanc service and executed a test C-MOVE command. The server successfully translated the AET, connected to the client's active listener port, and seamlessly pushed the DICOM payload.
+
+**6. Business & Operational Impact**
+* Demonstrated advanced understanding of bidirectional DICOM architecture, specifically the inversion of client/server roles during C-MOVE operations.
+* Established a robust, log-driven troubleshooting framework to systematically resolve complex, multi-stage network timeouts between clinical endpoints and the central archive.
+
+[Insert Screenshot: Empty DicomModalities Routing Table]
+[Insert Screenshot: Microdicom Workstation showing populated studies]
+[Insert Screenshot: Successful C-FIND Log]
+[Insert Screenshot: Rejected C-MOVE Log]
+[Insert Screenshot: The Fix - Adding routing parameters]
+[Insert Screenshot: Result - Successful C-MOVE Handshake]
+[Insert Screenshot: Outbound Server C-STORE Request/Response Logs]
