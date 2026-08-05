@@ -12,9 +12,9 @@ A local DICOM viewer (Microdicom) encountered an immediate connection terminatio
 * The connection failure was not caused by a network outage, but by the server’s strict internal security protocols.
 * The PACS server actively refused the Association Request because the client's Application Entity Title (AET) was not registered in the server's trusted modalities matrix (DicomModalities).
 
-[Insert Screenshot: Microdicom DICOM Nodes Options]
-[Insert Screenshot: Orthanc Logs - DICOM authorization rejected]
-[Insert Screenshot: configuration.json - DicomAlwaysAllowEcho set to false]
+[PACS_cannot_be_reached](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%201:%20C-ECHO%20Authorization%20Rejection%20&%20Security%20Compliance/DICOM_err.png?raw=true)
+[Assisciation_rejected](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%201:%20C-ECHO%20Authorization%20Rejection%20&%20Security%20Compliance/Assosciation_rejected.png?raw=true)
+[ECHO_notAllowed](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%201:%20C-ECHO%20Authorization%20Rejection%20&%20Security%20Compliance/Echo.png?raw=true)
 
 **4. Troubleshooting Methodology**
 * Executed a standard C-ECHO request from the client modality, which resulted in a visible system failure.
@@ -28,8 +28,8 @@ A local DICOM viewer (Microdicom) encountered an immediate connection terminatio
 * Added the specific AET, IP address, and listener port to the "DicomModalities" JSON object.
 * A subsequent service restart applied the new security policy, yielding a successful Association Acknowledged log status and restoring verified connectivity.
 
-[Insert Screenshot: The Fix - Adding AET to configuration.json]
-[Insert Screenshot: Verified Microdicom Configuration]
+[The Fix - Adding AET to configuration.json](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%201:%20C-ECHO%20Authorization%20Rejection%20&%20Security%20Compliance/edit_config.png?raw=true)
+[Verified Microdicom Configuration](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%201:%20C-ECHO%20Authorization%20Rejection%20&%20Security%20Compliance/DICOM%20NODES.png?raw=true)
 
 **6. Business & Operational Impact**
 * This proactive security configuration enforces strict data governance.
