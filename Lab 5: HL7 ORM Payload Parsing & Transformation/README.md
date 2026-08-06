@@ -29,7 +29,7 @@ msg['PID']['PID.3']['PID.3.1'] = msg['PID']['PID.2']['PID.2.1'].toString();
 ## 6. Visual Documentation
 
 ### 1. Inbound Channel Configuration (TCP Listener)
-[[TCP Listener Configuration](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/images/%60tcp_listener.png%60.png?raw=true)
+[TCP Listener Configuration](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/images/%60tcp_listener.png%60.png?raw=true)
 
 ### 2. JavaScript Transformation Mapping
 [JavaScript Transformation Logic](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/images/%60javascript_mapping.png%60.png?raw=true)
