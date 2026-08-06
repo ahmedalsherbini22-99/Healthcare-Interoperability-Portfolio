@@ -27,12 +27,12 @@ To validate the pipeline, I simulated an EMR system by transmitting a raw HL7 AD
 * **Validation:** Instead of requesting a new transmission from the source, I utilized the engine's internal queue to reprocess the failed messages. The backlog flushed successfully, populating the PostgreSQL table with zero data loss.
 
 ## 5. Visual Documentation
-*[Creating a table in the SQL DB](
-* Mirth Connect Dashboard showing the Deployed Channel and active port](
-*[The JavaScript Transformer mapping the HL7 PID segment-The transformer]
-[The JavaScript Transformer mapping the HL7 PID segment1]
-[The JavaScript Transformer mapping the HL7 PID segment2]
-[The JavaScript Transformer mapping the HL7 PID segment3]
-[Error in channel logs]
-[The fix in the Transformer]
-*[Insert Screenshot 3: pgAdmin SQL query showing the successfully inserted Patient Name, MRN, and DOB]*
+*[Creating a table in the SQL DB](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%206:%20Enterprise%20HL7%20Integration%20&%20Database%20Routing/Creating%20a%20table%20in%20the%20SQL%20DB.png?raw=true)
+*[Mirth Connect Dashboard showing the Deployed Channel and active port](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%206:%20Enterprise%20HL7%20Integration%20&%20Database%20Routing/Mirth%20Connect%20Dashboard%20showing%20the%20Deployed%20Channel%20and%20active%20port.png?raw=true)
+*[The JavaScript Transformer mapping the HL7 PID segment-The transformer](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%206:%20Enterprise%20HL7%20Integration%20&%20Database%20Routing/The%20JavaScript%20Transformer%20mapping%20the%20HL7%20PID%20segment%5D.png?raw=true)
+*[The JavaScript Transformer mapping the HL7 PID segment1](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%206:%20Enterprise%20HL7%20Integration%20&%20Database%20Routing/The%20JavaScript%20Transformer%20mapping%20the%20HL7%20PID%20segment1.png?raw=true)
+*[The JavaScript Transformer mapping the HL7 PID segment2](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%206:%20Enterprise%20HL7%20Integration%20&%20Database%20Routing/The%20JavaScript%20Transformer%20mapping%20the%20HL7%20PID%20segment2.png?raw=true)
+*[The JavaScript Transformer mapping the HL7 PID segment3](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%206:%20Enterprise%20HL7%20Integration%20&%20Database%20Routing/The%20JavaScript%20Transformer%20mapping%20the%20HL7%20PID%20segment3.png?raw=true)
+*[Error in channel logs](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%206:%20Enterprise%20HL7%20Integration%20&%20Database%20Routing/Error%20in%20channel%20Logs.png?raw=true)
+*[The fix in the Transformer](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%206:%20Enterprise%20HL7%20Integration%20&%20Database%20Routing/The%20fix%20in%20the%20Transformer.png?raw=true)
+*[pgAdmin SQL query showing the successfully inserted Patient Name, MRN, and DOB](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%206:%20Enterprise%20HL7%20Integration%20&%20Database%20Routing/Success.png?raw=true)
