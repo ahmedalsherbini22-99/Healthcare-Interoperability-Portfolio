@@ -25,3 +25,9 @@ During a PACS implementation, the source EMR was transmitting the patient identi
 ```javascript
 // Extracts the ID from PID-2, converts to a standard string, and assigns it to PID-3
 msg['PID']['PID.3']['PID.3.1'] = msg['PID']['PID.2']['PID.2.1'].toString();
+
+![TCP Listener Configuration](images/`tcp_listener.png`.png)
+
+![JavaScript Transformation Logic](images/`javascript_mapping.png`.png)
+
+![Corrected Outbound Payload](images/`encoded_success.png`.png)
