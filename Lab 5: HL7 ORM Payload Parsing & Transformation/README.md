@@ -25,10 +25,19 @@ During a PACS implementation, the source EMR was transmitting the patient identi
 ```javascript
 // Extracts the ID from PID-2, converts to a standard string, and assigns it to PID-3
 msg['PID']['PID.3']['PID.3.1'] = msg['PID']['PID.2']['PID.2.1'].toString();
-` ``` `
-![TCP Listener Configuration](images/`tcp_listener.png`.png)
+```
+## 6. Visual Documentation
 
+### 1. Inbound Channel Configuration (TCP Listener)
+> *The Source channel configured to actively listen for incoming radiology order traffic on Port 6661.*
+![TCP Listener Configuration](![TCP Listener Configuration](images/`tcp_listener.png`.png)
+
+### 2. JavaScript Transformation Mapping
+> *The surgical E4X JavaScript logic injected into the transformation layer to remap the demographic variables.*
 ![JavaScript Transformation Logic](images/`javascript_mapping.png`.png)
 
+### 3. Log Auditing & Encoded Validation
+> *The message trace logs confirming the ID was successfully replicated from PID-2 into PID-3 prior to destination routing.*
 ![Corrected Outbound Payload](images/`encoded_success.png`.png)
+
 
