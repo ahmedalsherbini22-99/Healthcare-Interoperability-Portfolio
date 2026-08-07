@@ -50,3 +50,7 @@ var orthancPayload = {
 // Convert the JSON object to a string for HTTP POST
 channelMap.put('jsonPayload', JSON.stringify(orthancPayload));
 ```
+**[ChannelSetup/HTTP Listner](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%208:%20Legacy%20HL7%20to%20Modern%20API%20(JSON)%20Bridge%20&%20Modality%20Worklist%20Integration/ChannelSourceSetup.png?raw=true)
+**[Identifying Orthanc API endpoint](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%208:%20Legacy%20HL7%20to%20Modern%20API%20(JSON)%20Bridge%20&%20Modality%20Worklist%20Integration/Identifying%20Orthanc%20API%20endpoint.png?raw=true)
+**[WorklistNotEnabled](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%208:%20Legacy%20HL7%20to%20Modern%20API%20(JSON)%20Bridge%20&%20Modality%20Worklist%20Integration/WorklistNotEnabled.png?raw=true)
+**[Sent to Orthanc Server](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/Lab%208:%20Legacy%20HL7%20to%20Modern%20API%20(JSON)%20Bridge%20&%20Modality%20Worklist%20Integration/Success%20in%20Modality%20worklist.png?raw=true)
