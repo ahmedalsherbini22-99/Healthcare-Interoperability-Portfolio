@@ -35,6 +35,6 @@ if (patientName.length == 0) {
 
 ```
 
-*[The Dual-Destination Architecture]()
-*[Database Protection Logic]()
-*[Quarantined Payload Validation]()
+*[The Dual-Destination Architecture](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/%23%20Lab%207:%20Automated%20Quality%20Assurance%20&%20Error%20Routing/Dual-Destination%20Architecture.png?raw=true)
+*[Database Protection Logic](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/%23%20Lab%207:%20Automated%20Quality%20Assurance%20&%20Error%20Routing/Database%20Protection%20Logic.png?raw=true)
+*[Quarantined Payload Validation](https://github.com/ahmedalsherbini22-99/Healthcare-Interoperability-Portfolio/blob/main/%23%20Lab%207:%20Automated%20Quality%20Assurance%20&%20Error%20Routing/Filtered%20successful%20message.png?raw=true)
